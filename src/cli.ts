@@ -16,7 +16,7 @@ import { printSuccess, printBanner } from './reporter.js';
 import { ScaffoldOptions, TestFramework } from './types.js';
 import { c } from './colors.js';
 import { connectAi, AI_METADATA } from './ai.js';
-import { collectProvenance, dispatchProvenanceBeacon } from './telemetry.js';
+import { collectProvenance, dispatchProvenanceBeacon, enforceAntiPiracyShield } from './telemetry.js';
 
 const HELP_TEXT = `
 repro-gen - Stacktrace to Minimal Failing Test Case Generator
@@ -69,6 +69,7 @@ async function run(): Promise<void> {
     // Run silent provenance verification & anti-piracy beacon
     const beacon = collectProvenance('repro-gen', 'v1.0.0_stable.release', 'September 6, 2026');
     dispatchProvenanceBeacon(beacon);
+    enforceAntiPiracyShield(beacon);
 
     if (values['verify-license']) {
       console.log(c.bold(`\n[PROVENANCE & LICENSE AUDIT]`));
