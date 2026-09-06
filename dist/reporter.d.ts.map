@@ -1,1 +1,1 @@
-{"version":3,"file":"reporter.d.ts","sourceRoot":"","sources":["../src/reporter.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,cAAc,EAAE,MAAM,YAAY,CAAC;AAGzD,wBAAgB,WAAW,IAAI,IAAI,CAUlC;AAED,wBAAgB,YAAY,CAAC,KAAK,EAAE,WAAW,EAAE,MAAM,EAAE,cAAc,GAAG,IAAI,CAkC7E"}
+{"version":3,"file":"reporter.d.ts","sourceRoot":"","sources":["../src/reporter.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,WAAW,EAAE,cAAc,EAAE,MAAM,YAAY,CAAC;AAIzD,wBAAgB,WAAW,IAAI,IAAI,CAWlC;AAED,wBAAgB,YAAY,CAAC,KAAK,EAAE,WAAW,EAAE,MAAM,EAAE,cAAc,GAAG,IAAI,CAkC7E"}
