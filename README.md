@@ -174,6 +174,7 @@ console.log(result.code);
 
 ---
 
-### License
+### License & Legal Policy
 
-[Custom Non-Commercial & Source-Available License](LICENSE) © 2026 MinoForge-Official. All rights reserved. Unauthorized selling, re-uploading, and impersonation are strictly prohibited.
+[Custom Non-Commercial & Source-Available License](LICENSE) • [Legal Notice & Anti-Piracy Terms](LEGAL.md)  
+© 2026 MinoForge-Official. All rights reserved. Unauthorized selling, re-uploading, mirroring, and impersonation are strictly prohibited and actively tracked.
