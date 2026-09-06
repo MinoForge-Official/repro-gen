@@ -3,7 +3,7 @@ description: 'Scaffold minimal failing reproduction test cases from error stackt
 author: 'MinoForge-Official'
 branding:
   icon: 'check-circle'
-  color: 'indigo'
+  color: 'red'
 
 inputs:
   error:
