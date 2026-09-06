@@ -1,0 +1,37 @@
+name: 'Repro Gen - Bug Test Scaffolder'
+description: 'Scaffold minimal failing reproduction test cases from error stacktraces directly in CI.'
+author: 'MinoForge-Official'
+branding:
+  icon: 'check-circle'
+  color: 'indigo'
+
+inputs:
+  error:
+    description: 'Raw error message, stacktrace string, or path to crash log file'
+    required: true
+  out:
+    description: 'Custom path for the generated test file (default: repro.test.ts)'
+    required: false
+    default: 'repro.test.ts'
+  framework:
+    description: 'Target test framework (vitest, jest, node:test, mocha, pytest)'
+    required: false
+    default: ''
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run repro-gen
+      shell: bash
+      run: |
+        OUT_FLAG=""
+        if [ -n "${{ inputs.out }}" ]; then
+          OUT_FLAG="--out ${{ inputs.out }}"
+        fi
+
+        FW_FLAG=""
+        if [ -n "${{ inputs.framework }}" ]; then
+          FW_FLAG="--framework ${{ inputs.framework }}"
+        fi
+
+        npx --yes repro-gen "${{ inputs.error }}" $OUT_FLAG $FW_FLAG

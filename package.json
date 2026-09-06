@@ -1,0 +1,44 @@
+{
+  "name": "repro-gen",
+  "version": "1.0.0",
+  "description": "Stacktrace to Minimal Failing Test Case Generator. Paste any error or stacktrace and get an instant, ready-to-run reproduction test.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "repro-gen": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "action.yml"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "node --test dist/tests/**/*.test.js",
+    "pretest": "npm run build"
+  },
+  "keywords": [
+    "stacktrace",
+    "test-generator",
+    "vitest",
+    "jest",
+    "pytest",
+    "bug-reproduction",
+    "testing",
+    "developer-tools",
+    "tdd"
+  ],
+  "author": "MinoForge-Official",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MinoForge-Official/repro-gen.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.3"
+  }
+}
